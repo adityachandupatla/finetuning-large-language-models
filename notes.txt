@@ -1,0 +1,64 @@
+
+Finetuning made GPT-3 to ChatGPT, GPT-4 to Github Copilot
+
+- Steers the model to more consistent output
+- Reduces hallucinations
+- Customizes the model to a specific use case
+- Process is similar to the model's earlier training
+
+Difference between prompting and finetuning:
+
+Prompting:
+
+	Pros:
+	- No data required to get started
+	- Smaller upfront cost
+	- No technical knowledge needed
+	- Connect data through retrieval (RAG)
+
+	Cons:
+	- Much less data fits
+	- Forgets data
+	- Hallucinations
+	- RAG misses, or gets incorrect data
+
+Finetuning:
+
+	Pros:
+	- Nearly unlimited data
+	- Learn new info (compared to base model)
+	- Correct incorrect info (compared to base model)
+	- Less cost afterwards it smaller model
+	- Can use RAG too
+
+	Cons:
+	- More high-quality data
+	- Upfront compute cost
+	- Needs some technical knowledge, esp. data
+
+Instruction fine-tuning refers to finetuning an LLM to follow instructions (GPT-3 to ChatGPT)
+
+You can fine-tune a base LLM to your needs by converting your domain-knowledge into Q/A pairs. Non Q/A pairs can be converted to Q/A pairs by using a prompt template (or using another LLM - ChatGPT (Alpaca), open source models)
+
+Note: once we have Q/A pairs gathered, we use traditional ML (with backprop) to train the underlying model. The ground truth is the answer you gathered, the prediction is the LLM's prediction
+
+Note:
+
+	Finetuning is harder for expansion models compared to extraction models.
+
+	Extraction is summarization
+
+	Expansion is generating large output for small inputs
+
+	The reason here is the output token size is much bigger for expansion models
+
+
+
+
+
+
+
+
+
+
+
